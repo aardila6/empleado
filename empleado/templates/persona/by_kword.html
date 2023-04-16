@@ -1,0 +1,17 @@
+<h1>Lista de empleados por Palabra Clave</h1>
+
+<form method="GET">{% csrf_token %}
+    <input type="text" id="kword" name="kword" placeholder="Ingrese datos aquí">
+    <button type="submit">Buscar</button>
+</form>
+
+<h3>
+    Lista Resultados
+</h3>
+<ul>
+    {% for e in empleados%}
+        <li>
+            {{e}}
+        </li>
+    {% endfor %}
+</ul>
